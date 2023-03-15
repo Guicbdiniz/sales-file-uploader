@@ -1,0 +1,13 @@
+div.goBack {
+  position: absolute;
+  left: 1rem;
+  color: #5f7470;
+  font-size: 2rem;
+  font-weight: bold;
+  font-variant: normal;
+  cursor: pointer;
+}
+
+div.goBack:hover {
+  text-shadow: 1px 1px #889696;
+}

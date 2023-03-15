@@ -1,0 +1,24 @@
+div.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+div.menu > h1.title {
+  text-align: center;
+  font-size: 8rem;
+  color: #5f7470;
+}
+
+div.menu > div.options > p.option {
+  text-align: center;
+  font-size: 5rem;
+  color: #889696;
+  cursor: pointer;
+}
+
+div.menu > div.options > p.option:hover {
+  color: #b8bdb5;
+}

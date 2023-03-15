@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Menu from "./screens/Menu";
+import Upload from "./screens/Upload";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(): JSX.Element {
+  const [screen, setScreen] = useState<
+    "menu" | "upload" | "transactions" | "balances"
+  >("menu");
+
+  const goToBalances = () => {
+    setScreen("balances");
+  };
+
+  const goToTransactions = () => {
+    setScreen("transactions");
+  };
+
+  const goToUpload = () => {
+    setScreen("upload");
+  };
+
+  const goToMenu = () => {
+    setScreen("menu");
+  };
+
+  switch (screen) {
+    case "menu": {
+      return (
+        <Menu
+          goToBalances={goToBalances}
+          goToTransactions={goToTransactions}
+          goToUpload={goToUpload}
+        />
+      );
+    }
+    case "upload": {
+      return <Upload goBack={goToMenu} />;
+    }
+    default:
+      return <div></div>;
+  }
 }
 
 export default App;

@@ -1,0 +1,15 @@
+footer {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: #5f7470;
+  font-weight: bold;
+  font-variant: normal;
+}
+
+footer > a {
+  color: #5f7470;
+  font-weight: bold;
+  font-variant: normal;
+  text-decoration: none;
+}

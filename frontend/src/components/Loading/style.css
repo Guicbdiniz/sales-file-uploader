@@ -1,0 +1,8 @@
+div.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  color: #5f7470;
+}

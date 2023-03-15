@@ -1,0 +1,58 @@
+div.upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+div.upload > input {
+  display: none;
+}
+
+div.upload > label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  font-size: 7rem;
+  color: #5f7470;
+  width: 10rem;
+}
+
+div.upload > label:hover {
+  color: #5f7470;
+  text-shadow: 4px 4px #889696;
+}
+
+div.upload > div.file-data {
+  font-size: 1.2rem;
+  color: #5f7470;
+  max-width: 60vw;
+  max-height: 60vh;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+div.upload > div.file-data::-webkit-scrollbar {
+  display: none;
+}
+
+div.upload > div.file-data > p.file-name {
+  font-size: 2rem;
+}
+
+div.upload > div.confirm {
+  margin-top: 1rem;
+  font-size: 3rem;
+  color: #5f7470;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+div.upload > div.confirm:hover {
+  color: #5f7470;
+  text-shadow: 2px 2px #889696;
+}

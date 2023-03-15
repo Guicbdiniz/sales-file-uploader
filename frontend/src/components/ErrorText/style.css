@@ -1,0 +1,10 @@
+div.error-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    color: #EC4E20;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
