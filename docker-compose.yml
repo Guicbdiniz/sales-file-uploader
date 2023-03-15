@@ -4,6 +4,7 @@ services:
   frontend:
     build:
       context: ./frontend
+      target: dev
     ports:
       - "80:80"
     volumes:
