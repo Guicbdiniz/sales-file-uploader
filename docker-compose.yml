@@ -8,7 +8,8 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./frontend:/app
+      - ./frontend/src:/app/src
+      - ./frontend/build:/app/build
       - /app/node_modules
     networks:
       - app_net
