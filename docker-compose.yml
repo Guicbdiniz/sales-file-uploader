@@ -7,6 +7,8 @@ services:
       target: dev
     ports:
       - "80:80"
+    environment:
+      REACT_APP_API_URL: ${REACT_APP_API_URL}
     volumes:
       - ./frontend/src:/app/src
       - ./frontend/build:/app/build
@@ -14,7 +16,7 @@ services:
     networks:
       - app_net
 
-  backend:
+  api:
     build:
       context: ./backend
     ports:
@@ -25,7 +27,7 @@ services:
       POSTGRES_URL: ${POSTGRES_URL}
     networks:
       - app_net
-  
+
   database:
     image: postgres:15.2-alpine
     restart: always
