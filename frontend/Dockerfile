@@ -20,6 +20,8 @@ CMD [ "npm", "start" ]
 # 2. Build
 FROM dev AS build
 
+ENV NODE_ENV=production
+
 RUN npm run build
 
 # 3. Prod

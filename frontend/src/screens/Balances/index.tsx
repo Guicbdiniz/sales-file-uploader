@@ -44,12 +44,16 @@ const Balances: React.FC<Props> = (props) => {
 
     return (
       <div className="data">
-        {balances.map((balance, index) => (
-          <div className="balance" key={index}>
-            {balance.isProducer ? "PRODUCER " : "NOT PRODUCER "}
-            {balance.name} - {balance.balance} centavos.
-          </div>
-        ))}
+        {balances.length > 0 ? (
+          balances.map((balance, index) => (
+            <div className="balance" key={index}>
+              {balance.isProducer ? "PRODUCER " : "NOT PRODUCER "}
+              {balance.name} - {balance.balance} centavos.
+            </div>
+          ))
+        ) : (
+          <div className="transaction">No balances were saved yet.</div>
+        )}
       </div>
     );
   };

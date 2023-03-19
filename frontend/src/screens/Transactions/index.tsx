@@ -44,13 +44,17 @@ const Transactions: React.FC<Props> = (props) => {
 
     return (
       <div className="data">
-        {transactions.map((transaction, index) => (
-          <div className="transaction" key={index}>
-            {transaction.type} - {transaction.value} centavos of{" "}
-            {transaction.product} - {transaction.seller} -{" "}
-            {transaction.date.toString()}
-          </div>
-        ))}
+        {transactions.length > 0 ? (
+          transactions.map((transaction, index) => (
+            <div className="transaction" key={index}>
+              {transaction.type} - {transaction.value} centavos of{" "}
+              {transaction.product} - {transaction.seller} -{" "}
+              {transaction.date.toString()}
+            </div>
+          ))
+        ) : (
+          <div className="transaction">No transactions were saved yet.</div>
+        )}
       </div>
     );
   };
