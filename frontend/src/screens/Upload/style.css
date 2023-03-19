@@ -56,3 +56,14 @@ div.upload > div.confirm:hover {
   color: #5f7470;
   text-shadow: 2px 2px #889696;
 }
+
+div.upload > div.uploaded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 5rem;
+  color: #a1cda8;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

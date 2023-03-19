@@ -1,0 +1,27 @@
+div.transactions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+div.transactions > h1 {
+  font-size: 5rem;
+  color: #5f7470;
+  margin-bottom: 3rem;
+}
+
+div.transactions > div.data {
+  font-size: 1.2rem;
+  color: #5f7470;
+  max-width: 60vw;
+  max-height: 60vh;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+div.transactions > div.data::-webkit-scrollbar {
+  display: none;
+}

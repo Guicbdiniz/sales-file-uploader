@@ -4,7 +4,7 @@ import {
   TransactionType,
   UnknownFileError,
   UnsupportedFileFormatError,
-} from "./types";
+} from "../types";
 
 const TEXT_FILE_FORMAT = "text/plain";
 

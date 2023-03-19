@@ -1,0 +1,27 @@
+div.balances {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+div.balances > h1 {
+  font-size: 5rem;
+  color: #5f7470;
+  margin-bottom: 3rem;
+}
+
+div.balances > div.data {
+  font-size: 1.2rem;
+  color: #5f7470;
+  max-width: 60vw;
+  max-height: 60vh;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+div.balances > div.data::-webkit-scrollbar {
+  display: none;
+}

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import Balances from "./screens/Balances";
 import Menu from "./screens/Menu";
+import Transactions from "./screens/Transactions";
 import Upload from "./screens/Upload";
 
 function App(): JSX.Element {
@@ -36,8 +38,12 @@ function App(): JSX.Element {
     case "upload": {
       return <Upload goBack={goToMenu} />;
     }
-    default:
-      return <div></div>;
+    case "transactions": {
+      return <Transactions goBack={goToMenu} />;
+    }
+    case "balances": {
+      return <Balances goBack={goToMenu} />;
+    }
   }
 }
 

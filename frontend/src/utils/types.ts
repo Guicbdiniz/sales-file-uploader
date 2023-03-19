@@ -17,6 +17,12 @@ export type Transaction = {
   seller: string;
 };
 
+export type Balance = {
+  isProducer: boolean;
+  balance: number;
+  name: string;
+}
+
 export class UnsupportedFileFormatError extends Error {}
 
 export class UnknownFileError extends Error {}

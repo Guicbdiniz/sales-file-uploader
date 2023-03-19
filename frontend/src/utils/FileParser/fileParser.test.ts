@@ -1,5 +1,5 @@
-import { FileParser } from "./fileParser";
-import { Transaction, UnsupportedFileFormatError } from "./types";
+import { FileParser } from ".";
+import { Transaction, UnsupportedFileFormatError } from "../types";
 
 describe("FileParser", () => {
   let parser: FileParser;
@@ -53,7 +53,7 @@ describe("FileParser", () => {
     );
     let data = await parser.parse();
 
-    expect(data.name).toBe("text.txt")
+    expect(data.name).toBe("text.txt");
     expect(data.transactions[0]).toEqual<Transaction>({
       date: new Date("2022-01-15T19:20:30-03:00"),
       product: "CURSO DE BEM-ESTAR",
