@@ -13,6 +13,18 @@ services:
       - /app/node_modules
     networks:
       - app_net
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "3005:80"
+    depends_on:
+      - database
+    environment:
+      POSTGRES_URL: ${POSTGRES_URL}
+    networks:
+      - app_net
   
   database:
     image: postgres:15.2-alpine
@@ -20,6 +32,7 @@ services:
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
       PGDATA: /data/postgres
     volumes:
       - postgres:/data/postgres
