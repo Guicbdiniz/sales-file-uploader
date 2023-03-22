@@ -1,4 +1,4 @@
-# Desafio Programação Fullstack 1.2.0 - Guilherme Diniz
+# Hubla Programming Fullstack Challenge 1.2.0 - Guilherme Diniz
 
 Hello, I'm Guilherme Diniz and this is my solution to the fullstack programming
 challenge for Hubla.
